@@ -1,7 +1,14 @@
-.logo{
-    background-color: tomato;
+.logo,
+.logo__text {
+    color: var(--accent-color);
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+}
 
-    &:hover{
-        background-color: teal;
-    }
+.logo__text--inverse {
+    color: var(--new-accept);
+    text-decoration: none;
 }

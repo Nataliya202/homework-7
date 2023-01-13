@@ -1,28 +1,6 @@
-@mixin centeredFlex ($type: flex) {
-    display: $type;
-    align-items: center;
-    justify-content: center;
-}
 
-@mixin bordered($color:black, $type: solid){
-    border-top: 1px $color $type;
-    border-bottom: 1px $color $type;
-}
 
-@mixin generateIcons($iconList) {
-    @each $iconName in $iconList {
-        .icon-#{$iconName} {
-            background-image: url('../images/#{$iconName}.svg');
-            background-color: teal;
-        }
-    }
-}
-
-@mixin generateIcons($clienticonList) {
-    @each $iconName in $clienticonList {
-        .clienticon-#{$iconName} {
-            background-image: url('../images/#{$iconName}.svg');
-            background-color: teal;
-        }
-    }
+@mixin font ($fs, $lh) {
+    font-size: $fs;
+    line-height: $lh;
 }

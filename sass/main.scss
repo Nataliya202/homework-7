@@ -1,148 +1,21 @@
 @import './utils/variables';
+@import './utils/visually-hidden';
 @import './utils/placeholders';
 @import './utils/mixins';
-@import './base/normalize';
+
+@import './base/container';
+@import './base/section';
+@import './base/section-title';
+@import './base/common';
+
 @import './components/page-header';
 @import './components/logo';
+@import './components/propositions';
+@import './components/features';
+@import './components/works';
+@import './components/team';
+@import './components/client';
+@import './components/footer';
+@import './components/modal';
+@import './components/portfolio';
 
-// $color: red;
-// $main-width: 100px;
-
-// body{
-//     background-color: $color;
-//     width: $max-width;
-// }
-
-// .section{
-//     color: aqua;
-
-//     .title{
-//         color: blue;
-//     }
-
-//     .text{
-//         color: brown;
-//     }
-// }
-
-// .section{
-//     color: aqua;
-
-//     &-title{
-//         color: black;
-//         &--red{
-//             color: burlywood;
-//         }
-//     }
-
-//     &-text{
-//         color: blueviolet;
-//     }
-// }
-//  по БЕМ
-// .section {
-//     color: aqua;
-
-//     &__title {
-//         color: black;
-
-//         &--red {
-//             color: burlywood;
-//         }
-//     }
-
-//     &__text {
-//         color: blueviolet;
-//     }
-// } не читабельно, много вложенностей
-
-// .section{
-//     color: blue;
-//     &:hover{
-//         color: aqua;
-//     }
-// }
-
-// .section__title{
-//     color: azure;
-//     &:hover{
-//         color: bisque;
-//     }
-//     &--red{
-//         color: blueviolet;
-//     }
-// }
-
-// .section__text{
-//     color: brown;
-//     &:hover{
-//         color: black;
-//     }
-// } так правильно
-
-// .box{
-//     background-color: aqua;
-// }
-
-// .button{
-//     background-color: aliceblue;
-//     &:hover, &:focus{
-//         color: blue;
-//     }
-//     .box:hover &{
-//         background-color: teal;
-//     }
-// }
-
-p {
-    background-color: $text-color;
-}
-
-.notification-error{
-    @extend %notification;
-    background-color: aliceblue;
-}
-
-.notification-success{
-    @extend %notification;
-    background-color: turquoise;
-}
-
-.features{
-    @extend %list;
-}
-
-p{
-    @include centeredFlex();
-}
-
-div{
-    @include centeredFlex();
-}
-
-button{
-    @include centeredFlex(inline-flex);
-}
-
-$icons: 'facebook', 'instagram', 'linkenid', 'twitter';
-
-// @each $iconName in $icons{
-//     .icon-#{$iconName} {
-//         background-image: url('../images/#{$iconName}.svg');
-//         background-color: teal;
-//     }
-// }
-
-// @mixin generateIcons($iconList){
-//     @each $iconName in $iconList {
-//             .icon-#{$iconName} {
-//                 background-image: url('../images/#{$iconName}.svg');
-//                 background-color: teal;
-//             }
-//         }
-// }
-
-@include generateIcons($icons);
-
-$clientIcons: 'client1' 'client2' 'client3' 'client4' 'client5' 'client6';
-@include generateIcons($clientIcons);
